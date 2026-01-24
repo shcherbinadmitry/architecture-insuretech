@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: scaletestapp-metrics
+  namespace: monitoring
+  labels:
+    app: scaletestapp
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: scaletestapp
+  endpoints:
+  - port: http
+    path: /metrics
+    interval: 30s
+  namespaceSelector:
+    matchNames:
+    - default
