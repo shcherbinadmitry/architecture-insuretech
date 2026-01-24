@@ -4,8 +4,6 @@
 
 Настройка Horizontal Pod Autoscaler (HPA) для автоматического масштабирования приложения на основе утилизации памяти.
 
-scaletestapp-6659db8585-tdn6q## Сборка образа для Apple Silicon (ARM64)
-
 Оригинальный образ `ghcr.io/yandex-practicum/scaletestapp` не поддерживает ARM64. Для Apple Silicon необходимо собрать образ локально:
 
 ```bash
